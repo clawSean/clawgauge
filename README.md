@@ -1,10 +1,10 @@
-# Model Quality Benchmark
+# ClawGauge
 
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-skill-EA4AAA)](https://openclaw.ai)
 [![ClawBench](https://img.shields.io/badge/ClawBench-compatible-2563EB)](https://github.com/openclaw/clawbench)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
-Compare models as working agents, not just leaderboard entries.
+Gauge models as working agents, not just leaderboard entries.
 
 This OpenClaw skill combines:
 
@@ -32,8 +32,8 @@ explicit rubric.
 Copy this repository into your OpenClaw workspace skills directory:
 
 ```bash
-git clone https://github.com/clawSean/model-quality-benchmark \
-  ~/.openclaw/workspace/skills/model-quality-benchmark
+git clone https://github.com/clawSean/clawgauge \
+  ~/.openclaw/workspace/skills/clawgauge
 ```
 
 Then start a new OpenClaw session so the skill catalog refreshes.
