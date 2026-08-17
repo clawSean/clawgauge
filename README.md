@@ -16,7 +16,10 @@ This OpenClaw skill combines:
   separate from deterministic capability and general intent claims.
 - **Versioned evidence envelopes** that prove the exact requested and observed
   route, reasoning/fast state, fallback state, commits, task fingerprint,
-  judge identity, campaign protocol, and optional pricing provenance.
+  judge identity, campaign protocol, content-bound cache telemetry, and
+  optional pricing provenance.
+- **Deterministic truthfulness gates** for false premises, failed-tool claims,
+  unsupported citations, abstention, and over-refusal.
 
 ## What it answers
 
@@ -55,12 +58,24 @@ The main helpers are:
   QA harness proof.
 - `scripts/run_openclaw_qa_gate.py` — full-profile, exact-route QA campaigns.
 - `scripts/score_qa_suite.py` — fail-closed attempt and terminal-result scoring.
+- `scripts/qualify_prefix_cache.py` — zero-call plan or fail-closed
+  cold/warm/exact-replay qualification of an already-running loopback MLX
+  route; the replay gate rejects full-response memo false greens.
 - `scripts/build_evidence_envelope.py` — wrap untouched ShellBench results with
   ClawGauge-owned provenance.
+- `scripts/build_cache_trace.py` — bind per-request cache/lifecycle telemetry to
+  one immutable artifact.
 - `scripts/compare_clawbench_results.py` — protocol-aware quality/value
   comparison with capability floors.
+- `scripts/estimate_campaign.py` — cache-profile-matched expected/p90 wall-time
+  estimate before an expensive run.
+- `scripts/build_truthfulness_plan.py` — frozen, content-bound n>=3 execution
+  cells for the deterministic truthfulness suite.
+- `scripts/score_truthfulness.py` — n>=3 content-bound deterministic
+  truthfulness gate; judges stay advisory.
 - `scripts/summarize_character_eval.py` — attested blind persona evidence.
-- `scripts/self_test.py` — provider-free regression and adversarial checks.
+- `scripts/self_test.py` — provider-free regression and adversarial checks,
+  including the loopback cache qualifier and truthfulness scorer.
 
 The included fixtures are synthetic, and the QA helpers isolate state and
 allowlist environment variables. Do not feed private chats, real credentials,
