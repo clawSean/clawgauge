@@ -60,13 +60,21 @@ The main helpers are:
 - `scripts/score_qa_suite.py` — fail-closed attempt and terminal-result scoring.
 - `scripts/qualify_prefix_cache.py` — zero-call plan or fail-closed
   cold/warm/exact-replay qualification of an already-running loopback MLX
-  route; the replay gate rejects full-response memo false greens.
+  service; grants direct-service reuse only and rejects response-memo false
+  greens.
+- `scripts/build_local_cache_admission_plan.py` — freeze exact provider,
+  response/loaded model, installed OpenClaw build, and architecture-specific
+  local-cache identity; plan generation alone proves nothing.
+- `scripts/validate_local_cache_admission.py` — content-bind every planned case,
+  exact OpenClaw route/fallback observation, architecture manifest, and runtime
+  epoch before granting `cache-qualified`.
 - `scripts/build_evidence_envelope.py` — wrap untouched ShellBench results with
   ClawGauge-owned provenance.
 - `scripts/build_cache_trace.py` — bind per-request cache/lifecycle telemetry to
   one immutable artifact.
 - `scripts/compare_clawbench_results.py` — protocol-aware quality/value
-  comparison with capability floors.
+  comparison with fail-closed Core-19, QA, truthfulness, and local-admission
+  requirements for decision-grade status.
 - `scripts/estimate_campaign.py` — cache-profile-matched expected/p90 wall-time
   estimate before an expensive run.
 - `scripts/build_truthfulness_plan.py` — frozen, content-bound n>=3 execution
@@ -76,6 +84,8 @@ The main helpers are:
 - `scripts/summarize_character_eval.py` — attested blind persona evidence.
 - `scripts/self_test.py` — provider-free regression and adversarial checks,
   including the loopback cache qualifier and truthfulness scorer.
+- `scripts/test_decision_grade.py` — adversarial stale/tampered QA, local
+  admission, and coverage-gate tests.
 
 The included fixtures are synthetic, and the QA helpers isolate state and
 allowlist environment variables. Do not feed private chats, real credentials,
