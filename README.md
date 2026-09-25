@@ -50,7 +50,20 @@ Then start a new OpenClaw session so the skill catalog refreshes.
 
 Read [`SKILL.md`](SKILL.md) for the workflow and safety constraints.
 
+For a small two-route coding screen, use the v5 personal campaign described in
+[`personal-campaign-safety.md`](references/personal-campaign-safety.md). It fixes
+implicit Gateway targeting and whole-answer memo reuse, bounds 18 serial cells,
+and distinguishes requested controls from independently observed identity.
+Provider-free lifecycle/native-schema checks do not establish real-provider
+readiness; subscription handoff and native route qualification remain separate
+prerequisites. No hard dollar cap, OS sandbox, or benchmark winner is claimed.
+
 The main helpers are:
+
+- `scripts/run_personal_campaign.py` — freeze and supervise the bounded screen.
+- `scripts/personal_campaign_worker.py` — disposable cell lifecycle and explicit endpoint.
+- `scripts/personal_campaign_config.py` — reject unsafe prepared-config overrides.
+- `scripts/analyze_personal_campaign.py` — summarize native scores and evidence gaps.
 
 - `scripts/inspect_checkouts.py` — record Mac/checkouts, commits, dirty state,
   and upstream drift without fetching.
@@ -93,6 +106,6 @@ or personal memory into benchmark runs.
 
 ## Repository model
 
-The live source is maintained in Sean's OpenClaw workspace. This repository and
+The live source is maintained in the contributor's OpenClaw workspace. This repository and
 the SkillReef copy are generated from the same scrubbed build so the public
 surfaces stay synchronized.
